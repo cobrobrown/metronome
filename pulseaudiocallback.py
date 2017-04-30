@@ -84,7 +84,7 @@ class PeakMonitor(object):
             print
             samplespec = pa_sample_spec()
             samplespec.channels = 1
-            samplespec.format = PA_SAMPLE_U8
+            samplespec.format = PA_SAMPLE_S16LE
             samplespec.rate = self.rate
 
             pa_stream = pa_stream_new(context, "peak detect demo", samplespec, None)
